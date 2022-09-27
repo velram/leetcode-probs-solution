@@ -16,14 +16,9 @@ public class RunningSumDriver {
 class RunningSumFinder {
     public int[] runningSum(int[] nums) {
 
-        int[] runningSum = new int[nums.length];
-
-        runningSum[0] = nums[0];
-
         for(int loopIndex = 1; loopIndex < nums.length; loopIndex++){
-            runningSum[loopIndex] = runningSum[loopIndex - 1] + nums[loopIndex];
+            nums[loopIndex] = nums[loopIndex] + nums[loopIndex-1];
         }
-
-        return runningSum;
+        return nums;
     }
 }
